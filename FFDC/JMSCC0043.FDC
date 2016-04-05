@@ -1,0 +1,681 @@
+----------------------------------START FFST------------------------------------
+/home/livious/Projects/agile-intro/FFDC/JMSCC0043.FDC PID:6199
+
+                                    FDCTitle
+                                            
+
+Product          :- IBM WebSphere MQ classes for JMS
+Date/Time        :- Fri Apr 24 11:09:45 SAST 2015
+System time      :- 1429866585183
+Operating System :- Linux
+UserID           :- livious
+Java Vendor      :- Oracle Corporation
+Java Version     :- 25.40-b25
+
+Source Class     :- com.ibm.msg.client.commonservices.j2se.NLSServices
+Source Method    :- insertMapToArray(String,HashMap)
+ProbeID          :- XS001007
+Thread           :- name=JMSCCThreadPoolWorker-3 priority=5 group=JMSCCThreadPool ccl=java.net.URLClassLoader@6c288eb7
+
+                                      Data
+                                      ----
+
+|   XMSC_INSERT_QUEUE_MANAGER          :-  dibot_qmgr
+|   XMSC_WMQ_CONNECTION_MODE           :-  1
+|   XMSC_WMQ_CONNECTION_NAME_LIST_INT  :-  fmodab1jbslz.standardbank.co.za(1420)
+|   index                              :-  2
+|   insert constants                   :-  XMSC_INSERT_QUEUE_MANAGER, XMSC_WMQ_CONNECTION_MODE, XMSC_WMQ_HOST_NAME
+|   message id                         :-  JMSWMQ0019
+
+                              Version information
+                              -------------------
+
+IBM WebSphere MQ
+7.0.1.7
+k701-107-111107
+Production
+
+Common Services for Java Platform, Standard Edition
+7.0.1.7
+k701-107-111107
+Production
+
+Java Message Service Client
+7.0.1.7
+k701-107-111107
+Production
+
+WebSphere MQ classes for Java Message Service
+7.0.1.7
+k701-107-111107
+Production
+
+
+
+                                  Stack trace
+                                  -----------
+
+Stack trace to show the location of the FFST call
+|   FFST Location  :-  java.lang.Exception
+|   	at com.ibm.msg.client.commonservices.trace.Trace.getCurrentPosition(Trace.java:1854)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.createFFSTString(Trace.java:1793)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.ffstInternal(Trace.java:1674)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.ffst(Trace.java:1491)
+|   	at com.ibm.msg.client.commonservices.j2se.NLSServices.insertMapToArray(NLSServices.java:496)
+|   	at com.ibm.msg.client.commonservices.j2se.NLSServices.getMessage(NLSServices.java:197)
+|   	at com.ibm.msg.client.commonservices.nls.NLSServices.getMessage(NLSServices.java:401)
+|   	at com.ibm.msg.client.wmq.common.internal.Reason.createException(Reason.java:232)
+|   	at com.ibm.msg.client.wmq.internal.WMQConnection.close(WMQConnection.java:754)
+|   	at com.ibm.msg.client.jms.internal.JmsConnectionImpl.close(JmsConnectionImpl.java:332)
+|   	at com.ibm.mq.jms.MQConnection.close(MQConnection.java:98)
+|   	at org.springframework.jms.connection.SingleConnectionFactory.closeConnection(SingleConnectionFactory.java:456)
+|   	at org.springframework.jms.connection.SingleConnectionFactory.resetConnection(SingleConnectionFactory.java:345)
+|   	at org.springframework.jms.connection.CachingConnectionFactory.resetConnection(CachingConnectionFactory.java:205)
+|   	at org.springframework.jms.connection.SingleConnectionFactory.onException(SingleConnectionFactory.java:323)
+|   	at org.springframework.jms.connection.SingleConnectionFactory$AggregatedExceptionListener.onException(SingleConnectionFactory.java:671)
+|   	at com.ibm.msg.client.jms.internal.JmsProviderExceptionListener.run(JmsProviderExceptionListener.java:436)
+|   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:209)
+|   	at com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:100)
+|   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:224)
+|   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:298)
+|   	at com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1220)
+|   
+
+                            Property Store Contents
+                            -----------------------
+
+All currently set properties
+|   LOG_FILE                                  :-  logs/intro.log
+|   PID                                       :-  6199
+|   awt.toolkit                               :-  sun.awt.X11.XToolkit
+|   catalina.base                             :-  /tmp/tomcat.4440473647112746821.8080
+|   catalina.home                             :-  /tmp/tomcat.4440473647112746821.8080
+|   catalina.useNaming                        :-  false
+|   classworlds.conf                          :-  /usr/share/maven/bin/m2.conf
+|   file.encoding                             :-  UTF-8
+|   file.encoding.pkg                         :-  sun.io
+|   file.separator                            :-  /
+|   guice.disable.misplaced.annotation.check  :-  true
+|   java.awt.graphicsenv                      :-  sun.awt.X11GraphicsEnvironment
+|   java.awt.headless                         :-  true
+|   java.awt.printerjob                       :-  sun.print.PSPrinterJob
+|   java.class.path                           :-  /usr/share/maven/boot/plexus-classworlds-2.x.jar
+|   java.class.version                        :-  52.0
+|   java.endorsed.dirs                        :-  /usr/lib/jvm/java-8-oracle/jre/lib/endorsed
+|   java.ext.dirs                             :-  /usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext
+|   java.home                                 :-  /usr/lib/jvm/java-8-oracle/jre
+|   java.io.tmpdir                            :-  /tmp
+|   java.library.path                         :-  /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+|   java.runtime.name                         :-  Java(TM) SE Runtime Environment
+|   java.runtime.version                      :-  1.8.0_40-b25
+|   java.specification.name                   :-  Java Platform API Specification
+|   java.specification.vendor                 :-  Oracle Corporation
+|   java.specification.version                :-  1.8
+|   java.vendor                               :-  Oracle Corporation
+|   java.vendor.url                           :-  http://java.oracle.com/
+|   java.vendor.url.bug                       :-  http://bugreport.sun.com/bugreport/
+|   java.version                              :-  1.8.0_40
+|   java.vm.info                              :-  mixed mode
+|   java.vm.name                              :-  Java HotSpot(TM) 64-Bit Server VM
+|   java.vm.specification.name                :-  Java Virtual Machine Specification
+|   java.vm.specification.vendor              :-  Oracle Corporation
+|   java.vm.specification.version             :-  1.8
+|   java.vm.vendor                            :-  Oracle Corporation
+|   java.vm.version                           :-  25.40-b25
+|   jboss.i18n.generate-proxies               :-  true
+|   line.separator                            :-  
+|   
+|   maven.home                                :-  /usr/share/maven
+|   org.jboss.logging.provider                :-  slf4j
+|   os.arch                                   :-  amd64
+|   os.name                                   :-  Linux
+|   os.version                                :-  3.13.0-37-generic
+|   path.separator                            :-  :
+|   securerandom.source                       :-  file:/dev/./urandom
+|   sun.arch.data.model                       :-  64
+|   sun.boot.class.path                       :-  /usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes
+|   sun.boot.library.path                     :-  /usr/lib/jvm/java-8-oracle/jre/lib/amd64
+|   sun.cpu.endian                            :-  little
+|   sun.cpu.isalist                           :-  
+|   sun.desktop                               :-  gnome
+|   sun.io.unicode.encoding                   :-  UnicodeLittle
+|   sun.java.command                          :-  org.codehaus.plexus.classworlds.launcher.Launcher clean spring-boot:run
+|   sun.java.launcher                         :-  SUN_STANDARD
+|   sun.jnu.encoding                          :-  UTF-8
+|   sun.management.compiler                   :-  HotSpot 64-Bit Tiered Compilers
+|   sun.os.patch.level                        :-  unknown
+|   user.country                              :-  ZA
+|   user.dir                                  :-  /home/livious/Projects/agile-intro
+|   user.home                                 :-  /home/livious
+|   user.language                             :-  en
+|   user.name                                 :-  livious
+|   user.timezone                             :-  Africa/Johannesburg
+
+                           WorkQueueMananger Contents
+                           --------------------------
+
+|   Current ThreadPool size      :-  2
+|   Maintain ThreadPool size     :-  false
+|   Maximum ThreadPool size      :-  -1
+|   ThreadPool inactive timeout  :-  0
+
+                               Runtime properties
+                               ------------------
+
+|   Available processors         :-  4
+|   Free memory in bytes (now)   :-  153819880
+|   Max memory in bytes          :-  880279552
+|   Total memory in bytes (now)  :-  411041792
+
+                           Component Manager Contents
+                           --------------------------
+
+Common Services Components:
+|   CMVC               :-  k701-107-111107
+|   Class Name         :-  class com.ibm.msg.client.commonservices.j2se.J2SEComponent
+|   Component Name     :-  com.ibm.msg.client.commonservices.j2se
+|   Component Title    :-  Common Services for Java Platform, Standard Edition
+|   Factory Class      :-  class com.ibm.msg.client.commonservices.j2se.CommonServicesImplementation
+|   Version            :-  7.0.1.7
+|   inPreferenceTo[0]  :-  com.ibm.msg.client.commonservices.j2me
+
+Messaging Provider Components:
+|   CMVC             :-  k701-107-111107
+|   Class Name       :-  class com.ibm.msg.client.wmq.factories.WMQComponent
+|   Component Name   :-  com.ibm.msg.client.wmq
+|   Component Title  :-  IBM WebSphere MQ
+|   Factory Class    :-  class com.ibm.msg.client.wmq.factories.WMQFactoryFactory
+|   Version          :-  7.0.1.7
+
+
+
+
+                         Provider Specific Information
+                         -----------------------------
+
+Overview of JMS System
+Num. Connections : 1
+Num. Sessions    : 0
+Num. Consumers   : 0
+Num. Producers   : 0
+
+Detailed JMS System Information
+Connections      : 
+|   Instance                    :-  com.ibm.msg.client.wmq.internal.WMQConnection@12848f93
+|   connectOptions              :-  version:5 options:64 clientConn:[channelName:'CLIENT.ibot_qmgr' version:6 channelType:6 transportType:2 desc:'<null>' qMgrName:'dibot_qmgr' xmitQName:'<null>' connectionName:'fmodab1jbslz.standardbank.co.za(1420)' mcaName:'<null>' modeName:'<null>' tpName:'<null>' batchSize:50 discInterval:6000 shortRetryCount:10 shortRetryInterval:60 longRetryCount:999999999 longRetryInterval:1200 seqNumberWrap:99999999 maxMsgLength:104857600 putAuthority:1 dataConversion:0 userIdentifier:'<null>' password:'<null>' mcaUserIdentifier:'<null>' mcaType:1 remoteUserIdentifier:'' msgRetryExit:'<null>' msgRetryUserData:'<null>' msgRetryCount:10 heartbeatInterval:1 batchInterval:0 nonPersistentMsgSpeed:2 clustersDefined:0 networkPriority:0 mcaSecurityId:00000000000000000000000000000000000000000000000000000000000000000000000000000000 remoteSecurityId:00000000000000000000000000000000000000000000000000000000000000000000000000000000 sslCipherSpec:'<null>' sslPeerName:'<null>' sslClientAuth:0 keepAliveInterval:-1 localAddress:'<null>' batchHeartbeat:0 hdrCompList:(0,-1)msgCompList:(0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1)clwlChannelRank:0 clwlChannelPriority:0 clwlChannelWeight:50 channelMonitoring:0 channelStatistics:0 exitNameLength:128 exitDataLength:32 sendExitsDefined:0 sendExit:'<null>' sendUserData:0000000000000000000000000000000000000000000000000000000000000000 sendExitPtr:<null> sendUserDataPtr:<null> receiveExitsDefined:0 receiveExit:'<null>' receiveUserData:0000000000000000000000000000000000000000000000000000000000000000 receiveExitPtr:<null> ReceiveUserDataPtr:<null> SharingConversations:999999999 propertyControl:0 maxInstances:999999999 maxInstancesPerClient:999999999 clientChannelWeight:0 connectionAffinity:1 ] connTag:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 sslConfig:[version:1 keyRepository:'<null>' cryptoHardware:'<null>' authInfoRecCount:0 keyResetCount:0 fipsRequired:0 ] connectionId:414D51436469626F745F716D6772202054816A0B24A68F01 securityParms:[<null>] 
+|   exceptionListener           :-  com.ibm.msg.client.jms.internal.JmsProviderExceptionListener@59e5305e
+|   helper                      :-  com.ibm.msg.client.wmq.internal.WMQConsumerOwnerShadow@184b1b49
+|   queueManagerName            :-  dibot_qmgr
+|   tempQPrefix                 :-  <null>
+|   temporaryDestinationNumber  :-  1
+|   temporaryModelQ             :-  <null>
+|   OBJECT_IDENTITY                     :-  2013265981
+|   XMSC_ADMIN_OBJECT_TYPE              :-  20
+|   XMSC_ASYNC_EXCEPTIONS               :-  -1
+|   XMSC_CLIENT_ID                      :-  <null>
+|   XMSC_CONNECTION_TYPE                :-  1
+|   XMSC_CONNECTION_TYPE_NAME           :-  com.ibm.msg.client.wmq
+|   XMSC_PASSWORD                       :-  
+|   XMSC_RTT_DIRECT_AUTH                :-  0
+|   XMSC_RTT_PROXY_HOSTNAME             :-  <null>
+|   XMSC_RTT_PROXY_PORT                 :-  443
+|   XMSC_USERID                         :-  
+|   XMSC_WMQ_BROKER_CC_SUBQ             :-  SYSTEM.JMS.ND.CC.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_BROKER_CONTROLQ            :-  SYSTEM.BROKER.CONTROL.QUEUE
+|   XMSC_WMQ_BROKER_PUBQ                :-  SYSTEM.BROKER.DEFAULT.STREAM
+|   XMSC_WMQ_BROKER_QMGR                :-  
+|   XMSC_WMQ_BROKER_SUBQ                :-  SYSTEM.JMS.ND.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_CCDTURL                    :-  <null>
+|   XMSC_WMQ_CF_DESCRIPTION             :-  <null>
+|   XMSC_WMQ_CHANNEL                    :-  CLIENT.ibot_qmgr
+|   XMSC_WMQ_CLEANUP_INTERVAL           :-  3600000
+|   XMSC_WMQ_CLEANUP_LEVEL              :-  1
+|   XMSC_WMQ_CLIENT_RECONNECT_OPTIONS   :-  0
+|   XMSC_WMQ_CLIENT_RECONNECT_TIMEOUT   :-  1800
+|   XMSC_WMQ_CLONE_SUPPORT              :-  0
+|   XMSC_WMQ_CONNECTION_MODE            :-  1
+|   XMSC_WMQ_CONNECTION_NAME_LIST_INT   :-  fmodab1jbslz.standardbank.co.za(1420)
+|   XMSC_WMQ_CONNECTION_TAG             :-  [B@5ca90f9c
+|   XMSC_WMQ_CONNECT_OPTIONS            :-  0
+|   XMSC_WMQ_HEADER_COMP                :-  [0]
+|   XMSC_WMQ_LOCAL_ADDRESS              :-  
+|   XMSC_WMQ_MAP_NAME_STYLE             :-  true
+|   XMSC_WMQ_MAX_BUFFER_SIZE            :-  1000
+|   XMSC_WMQ_MESSAGE_RETENTION          :-  1
+|   XMSC_WMQ_MESSAGE_SELECTION          :-  0
+|   XMSC_WMQ_MSG_BATCH_SIZE             :-  10
+|   XMSC_WMQ_MSG_COMP                   :-  [0]
+|   XMSC_WMQ_OPT_PUB                    :-  false
+|   XMSC_WMQ_OUTCOME_NOTIFICATION       :-  true
+|   XMSC_WMQ_POLLING_INTERVAL           :-  5000
+|   XMSC_WMQ_PROCESS_DURATION           :-  0
+|   XMSC_WMQ_PROVIDER_VERSION           :-  unspecified
+|   XMSC_WMQ_PUB_ACK_INTERVAL           :-  25
+|   XMSC_WMQ_QMGR_CCSID                 :-  819
+|   XMSC_WMQ_QUEUE_MANAGER              :-  dibot_qmgr
+|   XMSC_WMQ_RECEIVE_EXIT               :-  <null>
+|   XMSC_WMQ_RECEIVE_EXIT_INIT          :-  <null>
+|   XMSC_WMQ_RECEIVE_ISOLATION          :-  0
+|   XMSC_WMQ_RESCAN_INTERVAL            :-  5000
+|   XMSC_WMQ_RESOLVED_QUEUE_MANAGER     :-  dibot_qmgr
+|   XMSC_WMQ_RESOLVED_QUEUE_MANAGER_ID  :-  dibot_qmgr_2010-06-30_15.49.27                  
+|   XMSC_WMQ_SECURITY_EXIT              :-  <null>
+|   XMSC_WMQ_SECURITY_EXIT_INIT         :-  <null>
+|   XMSC_WMQ_SEND_CHECK_COUNT           :-  0
+|   XMSC_WMQ_SEND_EXIT                  :-  <null>
+|   XMSC_WMQ_SEND_EXIT_INIT             :-  <null>
+|   XMSC_WMQ_SHARE_CONV_ALLOWED         :-  1
+|   XMSC_WMQ_SPARSE_SUBSCRIPTIONS       :-  false
+|   XMSC_WMQ_SSL_CERT_STORES_COL        :-  <null>
+|   XMSC_WMQ_SSL_CERT_STORES_STR        :-  <null>
+|   XMSC_WMQ_SSL_CIPHER_SUITE           :-  <null>
+|   XMSC_WMQ_SSL_FIPS_REQUIRED          :-  false
+|   XMSC_WMQ_SSL_KEY_RESETCOUNT         :-  0
+|   XMSC_WMQ_SSL_PEER_NAME              :-  <null>
+|   XMSC_WMQ_SSL_SOCKET_FACTORY         :-  <null>
+|   XMSC_WMQ_STATUS_REFRESH_INTERVAL    :-  60000
+|   XMSC_WMQ_SUBSCRIPTION_STORE         :-  1
+|   XMSC_WMQ_SYNCPOINT_ALL_GETS         :-  false
+|   XMSC_WMQ_TARGET_CLIENT_MATCHING     :-  true
+|   XMSC_WMQ_TEMPORARY_MODEL            :-  SYSTEM.DEFAULT.MODEL.QUEUE
+|   XMSC_WMQ_TEMP_Q_PREFIX              :-  
+|   XMSC_WMQ_TEMP_TOPIC_PREFIX          :-  
+|   XMSC_WMQ_USE_CONNECTION_POOLING     :-  true
+|   brokerVersion                       :-  -1
+|   failIfQuiesce                       :-  1
+|   multicast                           :-  0
+|   version                             :-  7
+|   wildcardFormat                      :-  0
+
+Sessions         : 
+Consumers        : 
+Producers        : 
+
+All Thread Information
+
+                          Name : Signal Dispatcher
+                      Priority : 9
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 4
+                         State : RUNNABLE
+
+                          Name : http-nio-8080-exec-1
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 24
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-exec-8
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 31
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-exec-9
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 32
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-ClientPoller-1
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 20
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.EPollArrayWrapper.epollWait(EPollArrayWrapper.java:-2)
+                               : sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+                               : sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:1052)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-exec-7
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 29
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-exec-5
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 28
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : DefaultMessageListenerContainer-1
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 17
+                         State : BLOCKED
+                         Stack : org.springframework.jms.connection.SingleConnectionFactory$SharedConnectionInvocationHandler.localStop(SingleConnectionFactory.java:640)
+                               : org.springframework.jms.connection.SingleConnectionFactory$SharedConnectionInvocationHandler.invoke(SingleConnectionFactory.java:577)
+                               : com.sun.proxy.$Proxy82.close(null:-1)
+                               : org.springframework.jms.connection.ConnectionFactoryUtils.releaseConnection(ConnectionFactoryUtils.java:80)
+                               : org.springframework.jms.connection.JmsResourceHolder.closeAll(JmsResourceHolder.java:232)
+                               : org.springframework.jms.connection.ConnectionFactoryUtils$JmsResourceSynchronization.releaseResource(ConnectionFactoryUtils.java:430)
+                               : org.springframework.jms.connection.ConnectionFactoryUtils$JmsResourceSynchronization.releaseResource(ConnectionFactoryUtils.java:404)
+                               : org.springframework.transaction.support.ResourceHolderSynchronization.afterCompletion(ResourceHolderSynchronization.java:105)
+                               : org.springframework.transaction.support.TransactionSynchronizationUtils.invokeAfterCompletion(TransactionSynchronizationUtils.java:168)
+                               : org.springframework.transaction.support.AbstractPlatformTransactionManager.invokeAfterCompletion(AbstractPlatformTransactionManager.java:997)
+                               : org.springframework.transaction.support.AbstractPlatformTransactionManager.triggerAfterCompletion(AbstractPlatformTransactionManager.java:972)
+                               : org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:876)
+                               : org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:826)
+                               : org.springframework.jms.listener.AbstractPollingMessageListenerContainer.rollbackOnException(AbstractPollingMessageListenerContainer.java:394)
+                               : org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:229)
+                               : org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1142)
+                               : org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1134)
+                               : org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1031)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : Finalizer
+                      Priority : 8
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 3
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                               : java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+                          Name : ContainerBackgroundProcessor[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 14
+                         State : TIMED_WAITING
+                         Stack : java.lang.Thread.sleep(Thread.java:-2)
+                               : org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1345)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-Acceptor-0
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 21
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.ServerSocketChannelImpl.accept0(ServerSocketChannelImpl.java:-2)
+                               : sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:422)
+                               : sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:250)
+                               : org.apache.tomcat.util.net.NioEndpoint$Acceptor.run(NioEndpoint.java:688)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-exec-10
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 33
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-exec-2
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 25
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : JMSCCThreadPoolWorker-3
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=JMSCCThreadPool,maxpri=10]
+                            ID : 35
+                         State : RUNNABLE
+                         Stack : java.lang.Thread.dumpThreads(Thread.java:-2)
+                               : java.lang.Thread.getAllStackTraces(Thread.java:1603)
+                               : sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+                               : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                               : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                               : java.lang.reflect.Method.invoke(Method.java:497)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.getAllThreads(DefaultTracer.java:1405)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.generateThreadInfo(DefaultTracer.java:1226)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.access$1200(DefaultTracer.java:147)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer$8.run(DefaultTracer.java:1179)
+                               : java.security.AccessController.doPrivileged(AccessController.java:-2)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.ffst(DefaultTracer.java:1112)
+                               : com.ibm.msg.client.commonservices.trace.Trace.ffstInternal(Trace.java:1679)
+                               : com.ibm.msg.client.commonservices.trace.Trace.ffst(Trace.java:1491)
+                               : com.ibm.msg.client.commonservices.j2se.NLSServices.insertMapToArray(NLSServices.java:496)
+                               : com.ibm.msg.client.commonservices.j2se.NLSServices.getMessage(NLSServices.java:197)
+                               : com.ibm.msg.client.commonservices.nls.NLSServices.getMessage(NLSServices.java:401)
+                               : com.ibm.msg.client.wmq.common.internal.Reason.createException(Reason.java:232)
+                               : com.ibm.msg.client.wmq.internal.WMQConnection.close(WMQConnection.java:754)
+                               : com.ibm.msg.client.jms.internal.JmsConnectionImpl.close(JmsConnectionImpl.java:332)
+                               : com.ibm.mq.jms.MQConnection.close(MQConnection.java:98)
+                               : org.springframework.jms.connection.SingleConnectionFactory.closeConnection(SingleConnectionFactory.java:456)
+                               : org.springframework.jms.connection.SingleConnectionFactory.resetConnection(SingleConnectionFactory.java:345)
+                               : org.springframework.jms.connection.CachingConnectionFactory.resetConnection(CachingConnectionFactory.java:205)
+                               : org.springframework.jms.connection.SingleConnectionFactory.onException(SingleConnectionFactory.java:323)
+                               : org.springframework.jms.connection.SingleConnectionFactory$AggregatedExceptionListener.onException(SingleConnectionFactory.java:671)
+                               : com.ibm.msg.client.jms.internal.JmsProviderExceptionListener.run(JmsProviderExceptionListener.java:436)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:209)
+                               : com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:100)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:224)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:298)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1220)
+
+                          Name : DispatchThread: 1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=JMSCCThreadPool,maxpri=10]
+                            ID : 34
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : com.ibm.mq.jmqi.remote.internal.RemoteDispatchThread.waitOnSleepingEvent(RemoteDispatchThread.java:133)
+                               : com.ibm.mq.jmqi.remote.internal.RemoteDispatchThread.run(RemoteDispatchThread.java:660)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:209)
+                               : com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:100)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:224)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:298)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1220)
+
+                          Name : http-nio-8080-exec-6
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 30
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : http-nio-8080-ClientPoller-0
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 19
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.EPollArrayWrapper.epollWait(EPollArrayWrapper.java:-2)
+                               : sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+                               : sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:1052)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : JMSCCThreadPoolMaster
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 22
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.waitForNotification(WorkQueueManagerImplementation.java:651)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.waitForNotification(WorkQueueManagerImplementation.java:621)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.run(WorkQueueManagerImplementation.java:887)
+
+                          Name : http-nio-8080-exec-4
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 27
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : container-0
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 15
+                         State : TIMED_WAITING
+                         Stack : java.lang.Thread.sleep(Thread.java:-2)
+                               : org.apache.catalina.core.StandardServer.await(StandardServer.java:407)
+                               : org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer$1.run(TomcatEmbeddedServletContainer.java:139)
+
+                          Name : main
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 1
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Thread.join(Thread.java:1245)
+                               : java.lang.Thread.join(Thread.java:1319)
+                               : org.springframework.boot.maven.RunMojo.join(RunMojo.java:342)
+                               : org.springframework.boot.maven.RunMojo.runWithMavenJvm(RunMojo.java:213)
+                               : org.springframework.boot.maven.RunMojo.run(RunMojo.java:187)
+                               : org.springframework.boot.maven.RunMojo.execute(RunMojo.java:144)
+                               : org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+                               : org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+                               : org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+                               : org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+                               : org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+                               : org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+                               : org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+                               : org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+                               : org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+                               : org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+                               : org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+                               : org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+                               : org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+                               : sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+                               : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+                               : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                               : java.lang.reflect.Method.invoke(Method.java:497)
+                               : org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+                               : org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+                               : org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+                               : org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+
+                          Name : http-nio-8080-exec-3
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 26
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:103)
+                               : org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:31)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+                               : java.lang.Thread.run(Thread.java:745)
+
+                          Name : NioBlockingSelector.BlockPoller-1
+                      Priority : 5
+                   ThreadGroup : org.springframework.boot.maven.RunMojo$IsolatedThreadGroup[name=com.sb.intro.Application,maxpri=10]
+                            ID : 18
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.EPollArrayWrapper.epollWait(EPollArrayWrapper.java:-2)
+                               : sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+                               : sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : org.apache.tomcat.util.net.NioBlockingSelector$BlockPoller.run(NioBlockingSelector.java:342)
+
+                          Name : Reference Handler
+                      Priority : 10
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 2
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+First Failure Symptom Report completed at Fri Apr 24 11:09:45 SAST 2015
+------------------------------------END FFST------------------------------------

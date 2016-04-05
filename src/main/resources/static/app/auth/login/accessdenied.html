@@ -1,0 +1,22 @@
+<div class="abs-center wd-xl">
+    <!-- START panel-->
+    <div class="p">
+        <gravatar-image data-gravatar-email="{{user.email}}" data-gravatar-size="60" data-gravatar-rating="pg" data-gravatar-default="identicon" data-gravatar-css-class="img-thumbnail img-circle center-block" ></gravatar-image>
+    </div>
+    <div class="panel widget b0">
+        <div class="panel-body">
+            <p class="text-center">You are not authorised to use the requested resource</p>
+            <a ui-sref="login" class="btn btn-block btn-primary mt-lg" translate="button.login">Log in</a>
+        </div>
+
+    </div>
+    <!-- END panel-->
+    <div class="p-lg text-center">
+        <span>&copy;</span>
+        <span ng-bind="app.year"></span>
+        <span>-</span>
+        <span ng-bind="app.name"></span>
+        <br/>
+        <span ng-bind="app.description"></span>
+    </div>
+</div>

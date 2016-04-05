@@ -1,0 +1,52 @@
+<a href="https://github.com/angular-ui/ui-grid/edit/master/src/js/core/directives/ui-grid-style.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-grid/blob/9e07723/src/js/core/directives/ui-grid-style.js#L39" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">uiGridStyle</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ui.grid</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ui-grid-directive-page ui-grid-directive-uigridstyle-page"><p>Allows us to interpolate expressions in <code>&lt;style&gt;</code> elements. Angular doesn&#39;t do this by default as it can/will/might? break in IE8.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;style ui-grid-style&gt;
+   ...
+&lt;/style&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ui-grid-directive-page ui-grid-directive-uigridstyle-page"><h4 id="example_source">Source</h4>
+<div source-edit="app" source-edit-deps="angular.js script.js" source-edit-html="index.html-17" source-edit-css="" source-edit-js="script.js-16" source-edit-json="" source-edit-unit="" source-edit-scenario="scenario.js-18"></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-17" ng-html-wrap-loaded="app angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-17">
+
+
+<div ng-controller="MainCtrl">
+<style ui-grid-style>{{ myStyle }}</style>
+<span class="blah">I am in a box.</span>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-16"></pre>
+<script type="text/ng-template" id="script.js-16">
+var app = angular.module('app', ['ui.grid']);
+
+app.controller('MainCtrl', ['$scope', function ($scope) {
+       $scope.myStyle = '.blah { border: 1px solid }';
+     }]);
+</script>
+</div>
+<div class="tab-pane" title="End to end test">
+<pre class="prettyprint linenums" ng-set-text="scenario.js-18"></pre>
+<script type="text/ng-template" id="scenario.js-18">
+   it('should apply the right class to the element', function () {
+     element(by.css('.blah')).getCssValue('border-top-width')
+       .then(function(c) {
+         expect(c).toContain('1px');
+       });
+   });
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="app" ng-set-html="index.html-17" ng-eval-javascript="script.js-16"></div>
+</div></div>
+</div>

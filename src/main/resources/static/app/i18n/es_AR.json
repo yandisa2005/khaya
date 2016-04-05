@@ -1,0 +1,57 @@
+{
+    "dashboard": {
+        "WELCOME": "Welcome to {{appName}}"
+    },
+    "topbar": {
+        "messages": {
+            "UNREAD": "Unread messages",
+            "MORE": "More messages"
+        },
+        "search": {
+            "PLACEHOLDER": "Type and hit enter.."
+        },
+        "notification": {
+            "MORE": "More notifications"
+        }
+    },
+    "offsidebar": {
+        "setting": {
+            "SETTINGS": "Settings",
+            "layout": {
+                "FIXED": "Fixed",
+                "COLLAPSED": "Collapsed"
+            }
+        },
+        "chat": {
+            "CONNECTIONS": "Connections",
+            "SEARCH": "Search contacts",
+            "ONLINE": "ONLINE",
+            "OFFLINE": "OFFLINE",
+            "LOAD_MORE": "Load More",
+            "TASK_COMPLETION": "Tasks completion",
+            "QUOTA": "Upload Quota"
+        }
+    },
+    "sidebar": {
+        "WELCOME": "Welcome",
+        "heading": {
+            "HEADER": "Main Navigation"
+        },
+        "nav": {
+            "DASHBOARD": "Dashboard",
+            "TRANSACTIONS": "Transations",
+            "SETTINGS": "Settings",
+            "TEAMS": "Teams",
+            "SYSTEMS": "Systems",
+            "LOGOUT": "Logout"
+        }
+    },
+    "login": {
+        "form":{
+            "username": {
+                "label": "User",
+                "placeholder": "Enter"
+            }
+        }
+    }
+}

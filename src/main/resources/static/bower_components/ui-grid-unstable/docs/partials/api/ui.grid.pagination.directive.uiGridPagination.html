@@ -1,0 +1,61 @@
+<a href="https://github.com/angular-ui/ui-grid/edit/master/src/features/pagination/js/pagination.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-grid/blob/9e07723/src/features/pagination/js/pagination.js#L310" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">uiGridPagination</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ui.grid.pagination</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ui-grid-pagination-directive-page ui-grid-pagination-directive-uigridpagination-page"><p>Adds pagination features to grid</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;div ui-grid-pagination&gt;
+   ...
+&lt;/div&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ui-grid-pagination-directive-page ui-grid-pagination-directive-uigridpagination-page"><h4 id="example_source">Source</h4>
+<div source-edit="app" source-edit-deps="angular.js app.js" source-edit-html="index.html-5" source-edit-css="" source-edit-js="app.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-5" ng-html-wrap-loaded="app angular.js app.js"></pre>
+<script type="text/ng-template" id="index.html-5">
+<div ng-controller="MainCtrl">
+<div ui-grid="gridOptions" ui-grid-pagination></div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="app.js">
+<pre class="prettyprint linenums" ng-set-text="app.js"></pre>
+<script type="text/ng-template" id="app.js">
+var app = angular.module('app', ['ui.grid', 'ui.grid.pagination']);
+
+app.controller('MainCtrl', ['$scope', function ($scope) {
+   $scope.data = [
+     { name: 'Alex', car: 'Toyota' },
+     { name: 'Sam', car: 'Lexus' },
+     { name: 'Joe', car: 'Dodge' },
+     { name: 'Bob', car: 'Buick' },
+     { name: 'Cindy', car: 'Ford' },
+     { name: 'Brian', car: 'Audi' },
+     { name: 'Malcom', car: 'Mercedes Benz' },
+     { name: 'Dave', car: 'Ford' },
+     { name: 'Stacey', car: 'Audi' },
+     { name: 'Amy', car: 'Acura' },
+     { name: 'Scott', car: 'Toyota' },
+     { name: 'Ryan', car: 'BMW' },
+   ];
+
+   $scope.gridOptions = {
+     data: 'data',
+     paginationPageSizes: [5, 10, 25],
+     paginationPageSize: 5,
+     columnDefs: [
+       {name: 'name'},
+       {name: 'car'}
+     ]
+    }
+ }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="app" ng-set-html="index.html-5" ng-eval-javascript="app.js"></div>
+</div></div>
+</div>

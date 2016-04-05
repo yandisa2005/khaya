@@ -1,0 +1,55 @@
+<a href="https://github.com/angular-ui/ui-grid/edit/master/src/features/move-columns/js/column-movable.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/angular-ui/ui-grid/blob/9e07723/src/features/move-columns/js/column-movable.js#L235" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">uiGridMoveColumns</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">ui.grid.moveColumns</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ui-grid-movecolumns-directive-page ui-grid-movecolumns-directive-uigridmovecolumns-page"><p>Adds column moving features to the ui-grid directive.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;div ui-grid-move-columns&gt;
+   ...
+&lt;/div&gt;</pre>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ui-grid-movecolumns-directive-page ui-grid-movecolumns-directive-uigridmovecolumns-page"><h4 id="example_source">Source</h4>
+<div source-edit="app" source-edit-deps="angular.js app.js" source-edit-html="index.html-4" source-edit-css="main.css" source-edit-js="app.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-4" ng-html-wrap-loaded="app angular.js app.js"></pre>
+<script type="text/ng-template" id="index.html-4">
+<div ng-controller="MainCtrl">
+<div class="grid" ui-grid="{ data: data, columnDefs: columnDefs }" ui-grid-move-columns></div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="main.css">
+<pre class="prettyprint linenums" ng-set-text="main.css"></pre>
+<style type="text/css" id="main.css">
+.grid {
+   width: 100%;
+   height: 150px;
+ }
+</style>
+</div>
+<div class="tab-pane" title="app.js">
+<pre class="prettyprint linenums" ng-set-text="app.js"></pre>
+<script type="text/ng-template" id="app.js">
+var app = angular.module('app', ['ui.grid', 'ui.grid.moveColumns']);
+app.controller('MainCtrl', ['$scope', function ($scope) {
+     $scope.data = [
+       { name: 'Bob', title: 'CEO', age: 45 },
+       { name: 'Frank', title: 'Lowly Developer', age: 25 },
+       { name: 'Jenny', title: 'Highly Developer', age: 35 }
+     ];
+     $scope.columnDefs = [
+       {name: 'name'},
+       {name: 'title'},
+       {name: 'age'}
+     ];
+   }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="app" ng-set-html="index.html-4" ng-eval-javascript="app.js"></div>
+</div></div>
+</div>

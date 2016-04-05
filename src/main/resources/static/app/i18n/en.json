@@ -1,0 +1,76 @@
+{
+  "dashboard": {
+    "WELCOME": "Welcome to {{appName}}"
+  },
+  "topbar": {
+    "messages": {
+      "UNREAD": "Unread messages",
+      "MORE": "More messages"
+    },
+    "search": {
+      "PLACEHOLDER": "Type and hit enter.."
+    },
+    "notification": {
+      "MORE": "More notifications"
+    }
+  },
+  "offsidebar": {
+    "setting": {
+      "SETTINGS": "Settings",
+      "layout": {
+        "FIXED": "Fixed",
+        "COLLAPSED": "Collapsed"
+      }
+    },
+    "chat": {
+      "CONNECTIONS": "Connections",
+      "SEARCH": "Search contacts",
+      "ONLINE": "ONLINE",
+      "OFFLINE": "OFFLINE",
+      "LOAD_MORE": "Load More",
+      "TASK_COMPLETION": "Tasks completion",
+      "QUOTA": "Upload Quota"
+    }
+  },
+  "sidebar": {
+    "WELCOME": "Welcome",
+    "heading": {
+      "HEADER": ""
+    },
+    "nav": {
+        "DASHBOARD": "Dashboard",
+        "EVENTS": "Events",
+        "SETTINGS": "Settings",
+        "CLIENTS": "Clients",
+        "PERSONNEL": "Personnel",
+        "LOGOUT": "Logout"
+    }
+  },
+  "login": {
+      "title": "Login",
+      "form":{
+          "username": {
+              "label": "Username",
+              "placeholder": "Enter your domain login"
+          },
+          "password": {
+              "label": "Password",
+              "placeholder": "Enter your domain password"
+          },
+          "rememberMe": "Remember Me"
+      },
+      "messages": {
+          "error": {
+              "authentication": "Invalid user/password, please try again."
+          }
+      }
+  },
+  "button":{
+      "login": "Login",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "update": "Update",
+      "ok": "Ok",
+      "continue": "Continue"
+  }
+}

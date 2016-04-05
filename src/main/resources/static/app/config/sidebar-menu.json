@@ -1,0 +1,48 @@
+[
+  {
+    "text": "",
+    "heading": "true",
+    "translate": "sidebar.heading.HEADER"
+  },
+  {
+    "text": "Dashboard - Selimathunzi",
+    "sref": "main.home",
+    "icon": "icon-speedometer",
+    "translate": "sidebar.nav.DASHBOARD"
+  },
+  {
+    "text": "Events",
+    "sref": "main.events",
+    "icon": "icon-grid",
+    "translate": "sidebar.nav.EVENTS"
+  },
+  {
+    "text": "Clients",
+    "sref": "main.clients",
+    "icon": "icon-grid",
+    "translate": "sidebar.nav.CLIENTS"
+  },
+  {
+      "text": "Settings",
+      "sref": "#",
+      "icon": "icon-settings",
+      "submenu": [
+          { "text": "Client",
+            "sref": "main.clients",
+            "icon": "icon-users",
+            "translate": "sidebar.nav.CLIENTS"
+          },
+          { "text": "Personnel",
+            "sref": "main.personnel",
+            "translate": "sidebar.nav.PERSONNEL"
+          }
+      ],
+      "translate": "sidebar.nav.SETTINGS"
+  },
+  {
+    "text": "Logout",
+    "sref": "main.logout",
+    "icon": "icon-graduation",
+    "translate": "sidebar.nav.LOGOUT"
+  }
+]

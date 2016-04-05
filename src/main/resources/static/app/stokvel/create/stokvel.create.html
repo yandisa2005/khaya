@@ -1,0 +1,292 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a href="#/">Home</a></li>
+        <li class="active">Create Stokvel</li>
+    </ol>
+
+    <div class="row" id="stokvel-content">
+        <div class="col-lg-12">
+            <section class="panel panel-top-padding ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-success" ng-show="success">
+                                    <strong>Stokvel successfully created!</strong>
+                                </div>
+
+                                <div class="alert alert-danger" ng-show="errorStokvelExists">
+                                    <strong>Stokvel name already exists!</strong> Please choose
+                                    another one.
+                                </div>
+
+                                <div class="alert alert-danger" ng-show="error">
+                                    <strong>An error has occurred!</strong> Stokvel could not be
+                                    created.
+                                </div>
+                            </div>
+                        </div>
+
+                        <form name="form" role="form" novalidate ng-submit="save()"
+                              show-validation>
+
+                            <div class="col-md-4">
+                                <div class="panel-blue blue-text">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Stokvel Description</h5>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Stokvel Name</label> <input type="text"
+                                                                       class="form-control" name="name"
+                                                                       ng-model="stokvel.name"
+                                                                       ng-minlength=3 ng-maxlength=50 required
+                                                                       maxlength="50">
+
+                                    <div ng-show="form.name.$dirty && form.name.$invalid">
+                                        <p class="help-block" ng-show="form.name.$error.required">
+                                            Stokvel name is required.</p>
+
+                                        <p class="help-block" ng-show="form.name.$error.minlength">
+                                            Stokvel name is required to be at least 3 characters long</p>
+
+                                        <p class="help-block" ng-show="form.name.$error.maxlength">
+                                            Stokvel name cannot be longer than 50 characters</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label> <input type="text" class="form-control"
+                                                                      name="description" ng-model="stokvel.description"
+                                                                      ng-minlength=5
+                                                                      ng-maxlength=50 required maxlength="50">
+
+                                    <div
+                                        ng-show="form.description.$dirty && form.description.$invalid">
+                                        <p class="help-block" ng-show="form.description.$error.required">
+                                            Stokvel description is required.</p>
+
+                                        <p class="help-block" ng-show="form.description.$error.minlength">
+                                            Stokvel description is required to be at least 5 characters</p>
+
+                                        <p class="help-block" ng-show="form.description.$error.maxlength">
+                                            Stokvel description cannot be longer than 50 characters</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Stokvel type</label> <select name="stokvel_type"
+                                                                        class="form-control"
+                                                                        ng-model="stokvel.stokvelType"
+                                                                        ng-options="type.field as type.name for type in stokvelTypes"
+                                                                        required>
+                                    <option value="">Please select stokvel type</option>
+                                </select>
+
+                                    <p class="help-block"
+                                       ng-show="form.stokvel_type.$dirty && form.stokvel_type.$invalid">Please
+                                        select stokvel type</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>No of Members</label> <input type="number"
+                                                                        class="form-control" min="2" name="noOfMembers"
+                                                                        ng-model="stokvel.noOfMembers" required>
+
+                                    <div
+                                        ng-show="form.noOfMembers.$dirty && form.noOfMembers.$invalid">
+                                        <p class="help-block" ng-show="form.noOfMembers.$error.required">Number
+                                            of members is required.</p>
+
+                                        <p class="help-block" ng-show="form.noOfMembers.$error.min">Minimum
+                                            2 members + you required.</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Start Date</label> <input type="date" class="form-control"
+                                                                     name="startDate" ng-model="stokvel.startDate"
+                                                                     ng-change="onChangeDate()" required/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel-blue blue-text">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Stokvel Contributions</h5>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Contribution amount</label> <input type="number"
+                                                                              class="form-control"
+                                                                              name="contributionAmount"
+                                                                              ng-model="stokvel.contributionAmount"
+                                                                              ng-min="100" ng-max="6000"
+                                                                              required>
+
+                                    <div
+                                        ng-show="form.contributionAmount.$dirty && form.contributionAmount.$invalid">
+                                        <p class="help-block"
+                                           ng-show="form.contributionAmount.$error.required">Contribution
+                                            amount is required.</p>
+
+                                        <p class="help-block"
+                                           ng-show="form.contributionAmount.$error.min">Minimum
+                                            contribution amount is R100.00</p>
+
+                                        <p class="help-block"
+                                           ng-show="form.contributionAmount.$error.max">Maximum
+                                            contribution amount is R6000.00</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Payment Frequency</label> <select name="payment_frequency"
+                                                                             class="form-control"
+                                                                             ng-model="stokvel.paymentFrequency"
+                                                                             ng-options="paymentFrequency.field as paymentFrequency.name for paymentFrequency in paymentFrequencies"
+                                                                             required>
+                                    <option value="">Please select payment frequency</option>
+                                </select>
+
+                                    <p class="help-block"
+                                       ng-show="form.payment_frequency.$dirty && form.payment_frequency.$invalid">Please
+                                        select payment frequency</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Privacy Option</label> <select name="privacy_option"
+                                                                          class="form-control"
+                                                                          ng-model="stokvel.privacyOption"
+                                                                          ng-options="privacyOption.field as privacyOption.name for privacyOption in privacyOptions"
+                                                                          required>
+                                    <option value="">Please select stokvel privacy option</option>
+                                </select>
+
+                                    <p class="help-block"
+                                       ng-show="form.privacy_option.$dirty && form.privacy_option.$invalid">Please
+                                        select stokvel privacy option</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Contribution Date</label> <select name="contribution_date"
+                                                                             class="form-control"
+                                                                             ng-model="contributionDate"
+                                                                             ng-options="contributionDate.field as contributionDate.name for contributionDate in contributionDates"
+                                                                             required>
+                                    <option value="">Please select contribution date</option>
+                                </select>
+
+                                    <p class="help-block"
+                                       ng-show="form.contribution_date.$dirty && form.contribution_date.$invalid">Please
+                                        select contribution date</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel-blue blue-text">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Admin Banking Details</h5>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Bank Name</label> <select name="bank" class="form-control"
+                                                                     data-ng-options="bank.name as bank.name for bank in banks"
+                                                                     data-ng-model="stokvel.accounts.bankName" required>
+                                    <option value="">Please select bank name</option>
+                                </select>
+
+                                    <p class="help-block"
+                                       ng-show="form.bank.$dirty && form.bank.$invalid">Please
+                                        select bank from list</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Acc Holder Names</label> <input type="text"
+                                                                           class="form-control" name="accHolderName"
+                                                                           ng-model="stokvel.accounts.accHolderName"
+                                                                           ng-minLength="3"
+                                                                           ng-max="50" required>
+
+                                    <div
+                                        ng-show="form.accHolderName.$dirty && form.accHolderName.$invalid">
+                                        <p class="help-block"
+                                           ng-show="form.accHolderName.$error.required">Account Holder
+                                            Name is required.</p>
+
+                                        <p class="help-block"
+                                           ng-show="form.accHolderName.$error.minLength">Account Holder
+                                            Name Length is invalid</p>
+
+                                        <p class="help-block"
+                                           ng-show="form.accHolderName.$error.maxLength">Account Holder
+                                            Name Length is invalid</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Account Number</label> <input type="text"
+                                                                         class="form-control" name="account_number"
+                                                                         ng-model="stokvel.accounts.accountNumber"
+                                                                         ng-minLength="3"
+                                                                         ng-maxLength="20" required>
+
+                                    <div
+                                        ng-show="form.account_number.$dirty && form.account_number.$invalid">
+                                        <p class="help-block"
+                                           ng-show="form.account_number.$error.required">Account number
+                                            is required.</p>
+
+                                        <p class="help-block"
+                                           ng-show="form.account_number.$error.minLength">Account
+                                            number length is too short</p>
+
+                                        <p class="help-block"
+                                           ng-show="form.account_number.$error.maxLength">Account
+                                            number length is too long</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Account Type</label> <select name="account_type"
+                                                                        class="form-control"
+                                                                        ng-model="stokvel.accounts.accountType"
+                                                                        ng-options="accountType.field as accountType.name for accountType in accountTypes"
+                                                                        required>
+                                    <option value="">Please select account type</option>
+                                </select>
+
+                                    <p class="help-block"
+                                       ng-show="form.account_type.$dirty && form.account_type.$invalid">Please
+                                        select account type</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <br/> <input type="checkbox" name="debitAuthorization" required
+                                                 ng-model="stokvel.accounts.debitAuthorization"> <span
+                                    class="red-text">Authorization to debit (Once off) R112.00
+							stokvel initiation fee.</span> <br/>
+
+                                    <p class="help-block" ng-show="form.debitAuthorization.$invalid">Please
+                                        check the debit authorization checkbox</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <br/> <input type="checkbox" name="debitAuthorization" required
+                                                 ng-model="stokvel.accounts.debitAuthorization"> <span
+                                    class="red-text">Authorization to debit (Once off) R112.00
+							stokvel initiation fee.</span> <br/>
+
+                                    <p class="help-block" ng-show="form.debitAuthorization.$invalid">Please
+                                        check the debit authorization checkbox</p>
+                                </div>
+                                <button type="submit" ng-disabled="form.$invalid"
+                                        class="btn btn-primary col-md-offset-10">Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

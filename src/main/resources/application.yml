@@ -1,0 +1,32 @@
+logging:
+  file: logs/intro.log
+
+
+security:
+  basic:
+    enabled: false
+
+authentication:
+  xauth:
+      secret: odin
+      # Token is valid 30 minutes
+      tokenValidityInSeconds: 1800
+
+
+  datasource:
+    platform: h2
+
+  jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      database: H2
+      openInView: false
+      show_sql: false
+      generate-ddl: false
+      hibernate:
+        ddl-auto: create
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      properties:
+        hibernate.cache.use_second_level_cache: true
+        hibernate.cache.use_query_cache: false
+        hibernate.generate_statistics: false
+        hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory

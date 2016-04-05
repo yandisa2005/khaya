@@ -1,0 +1,15 @@
+{
+  "name": "ui-grid-unstable",
+  "homepage": "https://github.com/angular-ui/ui-grid.info",
+  "version": "3.0.7",
+  "_release": "3.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.7",
+    "commit": "c62784199ac0ae4049b500d43ddd5036e0515a42"
+  },
+  "_source": "git://github.com/angular-ui/ui-grid.info.git",
+  "_target": "~3.0.7",
+  "_originalSource": "ui-grid-unstable",
+  "_direct": true
+}
